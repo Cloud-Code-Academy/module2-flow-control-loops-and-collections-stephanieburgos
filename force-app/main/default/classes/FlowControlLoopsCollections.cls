@@ -57,11 +57,8 @@ public with sharing class FlowControlLoopsCollections {
     public static Integer findMax(Integer num1, Integer num2) {
         // Initialize largestNum as null
         Integer largestNum = num1 > num2 ? num1 : num2;
-        if (num1 == null || num2 == null) {
-            return null;
-        } else {
-            return largestNum;
-        }// Replace null with the variable you used to store the result
+        return (num1 == null || num2 == null) ? null : largestNum;
+        // Replace null with the variable you used to store the result
     }
 
 
@@ -200,9 +197,9 @@ public with sharing class FlowControlLoopsCollections {
         // Initialize the result String
         String helloWorld = '';
         // Use a for loop to append the inputString to the result string repeatCount times
-        for (Integer i = 1; i <= repeatCount; i++) {
+        for (Integer i = 0; i < repeatCount; i++) {
             // If it is not the last iteration, add a semicolon to separate the strings
-            if (i < repeatCount) {
+            if (i < repeatCount - 1) {
                 helloWorld +=  inputString + '; ';
             } else {
                 helloWorld +=  inputString;
@@ -286,10 +283,10 @@ public with sharing class FlowControlLoopsCollections {
         List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
         Integer sumOfInts = 0;
         // Loop through the list of integers
-        for (Integer i : numbers) {
+        for (Integer num : numbers) {
             // if the number is negative skip this iteration
-            if (i > 0) {
-                sumOfInts += i;
+            if (num > 0) {
+                sumOfInts += num;
             }
         }
         return sumOfInts; // Replace null with the variable you used to store the result
